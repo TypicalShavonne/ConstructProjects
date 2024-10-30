@@ -1,12 +1,6 @@
 name: IntellectualSites
 
-on:
-  push:
-    branches: [ main ]
-    paths:
-      - '.github/workflows/IntellectualSites.yml'
-  schedule:
-    - cron: '0 */12 * * *'
+on: workflow_dispatch
 
 jobs:
   PlotSquared:
@@ -15,3 +9,4 @@ jobs:
       repository: "IntellectualSites/PlotSquared"
       name: "PlotSquared"
       target: "Bukkit/build/libs/*.jar"
+

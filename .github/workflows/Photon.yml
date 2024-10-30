@@ -1,12 +1,6 @@
 name: Photon
 
-on:
-  push:
-    branches: [ main ]
-    paths:
-      - '.github/workflows/Photon.yml'
-  schedule:
-    - cron: '0 0 * * *'
+on: workflow_dispatch
 
 jobs:
   AntiCheatAddition:
@@ -16,3 +10,4 @@ jobs:
       name: "AntiCheatAddition"
       java: 17
       tasks: "clean package -DskipTests"
+

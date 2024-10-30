@@ -1,12 +1,6 @@
 name: VolmitSoftware
 
-on:
-  push:
-    branches: [ main ]
-    paths:
-      - '.github/workflows/VolmitSoftware.yml'
-  schedule:
-    - cron: '0 0 * * *'
+on: workflow_dispatch
 
 jobs:
   Iris:
@@ -39,3 +33,4 @@ jobs:
       tasks: "shadowJar"
       dir: "React"
       target: "React/build/libs/*.jar"
+
